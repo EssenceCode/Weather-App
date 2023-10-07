@@ -1,10 +1,12 @@
 import FetchWeather from "./weather-api";
 import displayLocation from "./location";
 import displayCondition from "./cloud-condition";
-import displayTemp, {displayTempF} from "./temperature";
+import displayTemp from "./temperature";
 import displayWind from "./wind-condition";
 import displayHumidity from "./humidity-condition";
 import displayAirQuality from "./air-condition";
+import switchTemp from "../switch-temp";
+
 
 let weather;
 export default function DomController() {
@@ -21,7 +23,9 @@ export default function DomController() {
                 displayWind(weather)
                 displayHumidity(weather)
                 displayAirQuality(weather)
-                console.log(weather)
+             
+
+            
                 inputSearch.value = ""
                 inputCheckbox.checked = true
             }
@@ -30,15 +34,15 @@ export default function DomController() {
 
     const checkboxEvent = () => {
         inputCheckbox.addEventListener("click", (e) => {
-            if(weather !== undefined) {
-                if(e.target.checked === false) {
-                    console.log(e.target)
-                    console.log(weather)    
-                    displayTempF(weather)
-                } else {
-                    displayTemp(weather)
-                }
+            if(e.target.checked === false) {
+                switchTemp(weather,e)
+               
             }
+            else if(e.target.checked !== false) {
+                switchTemp(weather,e)
+              
+            }
+            
         })
     };
 
@@ -52,6 +56,7 @@ export default function DomController() {
             displayWind(weather)
             displayHumidity(weather)
             displayAirQuality(weather)
+           
         })
     }
 

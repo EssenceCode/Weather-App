@@ -43,4 +43,5 @@ export default function displayWind(obj) {
 
 
     })
+    .catch((err) => console.log(err));
 }

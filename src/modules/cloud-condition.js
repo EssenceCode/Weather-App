@@ -29,4 +29,6 @@ export default function displayCondition(obj) {
 
         main.appendChild(cloudConditionDiv)
     })
+    .catch((err) => console.log(err));
+
 }

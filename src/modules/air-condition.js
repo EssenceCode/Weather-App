@@ -65,4 +65,6 @@ export default function displayAirQuality(obj) {
 
 
     })
+    .catch((err) => console.log(err));
+
 } 

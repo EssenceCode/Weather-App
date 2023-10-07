@@ -42,4 +42,6 @@ export default function displayHumidity(obj) {
         main.appendChild(humidityConditionImgDiv)
         main.appendChild(humidityConditionDiv)
     })
+    .catch((err) => console.log(err));
+
 }

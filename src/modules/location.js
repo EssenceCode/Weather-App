@@ -32,6 +32,7 @@ export default function displayLocation(obj) {
     }
     main.appendChild(locationConditionDiv);
      })
+     .catch((err) => console.log(err));
   }
   
 
