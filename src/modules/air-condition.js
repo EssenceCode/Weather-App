@@ -7,6 +7,7 @@ export default function displayAirQuality(obj) {
         
         const airConditionDiv = document.createElement("div")
         const airConditionText = document.createElement("div")
+        // const airConditonRating = document.createElement("div")
 
         const airConditionImgDiv = document.createElement("div")
         
@@ -20,9 +21,10 @@ export default function displayAirQuality(obj) {
         
 
         airConditionDiv.classList.add("air-condition")
+        airConditionText.classList.add("air-quality")
         airConditionImgDiv.classList.add("air-img")
 
-        airConditionDiv.textContent = `air quality:${airQuality}/10`
+        airConditionText.textContent = `air quality: ${airQuality}/10`
         // console.log(airQuality)
         
         const airImg = document.createElement("img")
@@ -35,6 +37,7 @@ export default function displayAirQuality(obj) {
           
         for (let i = 0; i < 1; i+=1) {
             const airQualityTextDiv = document.createElement("div")
+            airQualityTextDiv.classList.add("air-quality")
             if(airQuality === 1) {
                 airQualityTextDiv.textContent = "Good air quality"
             }
@@ -55,12 +58,12 @@ export default function displayAirQuality(obj) {
             }
 
 
-        main.appendChild(airQualityTextDiv)
+            airConditionDiv.appendChild(airQualityTextDiv)
             
         }
 
 
-        main.appendChild(airConditionText)
+        airConditionDiv.appendChild(airConditionText)
         main.appendChild(airConditionDiv)
 
 

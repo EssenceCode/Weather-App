@@ -5,8 +5,7 @@ import displayTemp from "./temperature";
 import displayWind from "./wind-condition";
 import displayHumidity from "./humidity-condition";
 import displayAirQuality from "./air-condition";
-import switchTemp from "../switch-temp";
-
+import switchTemp from "./switch-temp";
 
 let weather;
 export default function DomController() {

@@ -24,9 +24,9 @@ export default function displayHumidity(obj) {
         avgHumidityDiv.classList.add("avg-humidity")
         rainChanceDiv.classList.add("rain-chance")
 
-        currentHumidityDiv.textContent = `current humidity:${currentHumidity}%`
-        avgHumidityDiv.textContent = `average humidity:${avgHumidity}%`
-        rainChanceDiv.textContent = `chance of rain:${rainChance}%`
+        currentHumidityDiv.textContent = `current humidity: ${currentHumidity}%`
+        avgHumidityDiv.textContent = `average humidity: ${avgHumidity}%`
+        rainChanceDiv.textContent = `chance of rain: ${rainChance}%`
 
         const humidityImg = document.createElement("img")
         humidityImg.src = humidity

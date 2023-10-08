@@ -71,6 +71,7 @@ body {
   color: black;
   display: grid;
   place-items: center;
+  border-radius: 10px;
 }
 
 .wind-img, .humidity-img, .air-img {
@@ -114,8 +115,10 @@ body {
 }
 
 .slider:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  text-align: center;
   content: "°F";
   color: black;
   height: 26px;
